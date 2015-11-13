@@ -1,0 +1,22 @@
+{
+  "name": "webrcon",
+  "version": "1.0.0",
+  "description": "Web Based RCON / ARK server manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Awoolen/webrcon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Awoolen/webrcon/issues"
+  },
+  "homepage": "https://github.com/Awoolen/webrcon",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
