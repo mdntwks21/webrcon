@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Awoolen/webrcon.git"
+    "url": "https://github.com/Smircher/webrcon.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Awoolen/webrcon/issues"
+    "url": "https://github.com/Smircher/webrcon/issues"
   },
-  "homepage": "https://github.com/Awoolen/webrcon",
+  "homepage": "https://github.com/Smircher/webrcon",
   "dependencies": {
     "express": "^4.13.3"
   }
