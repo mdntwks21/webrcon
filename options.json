@@ -1,0 +1,8 @@
+{
+    steamDir: '',
+    steamApiKey: '',
+    isWin: false,
+    mods: [],
+    map: '',
+    logging: false,
+}
