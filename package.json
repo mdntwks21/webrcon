@@ -2,7 +2,7 @@
   "name": "webrcon",
   "version": "1.0.0",
   "description": "Web Based RCON / ARK server manager",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,9 @@
     "type": "git",
     "url": "https://github.com/Smircher/webrcon.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {"name":"Raymond Say", "url":"https://github.com/Smircher","email":""},
+  "contributors": [{"name":"Airrick Woolen", "url":"https://github.com/Awoolen","email":""}],
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Smircher/webrcon/issues"
   },
