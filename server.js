@@ -2,8 +2,8 @@
 
 var express = require('express'),
     app     = express(),
-    path    = require('path');
-    os      = require('os');
+    path    = require('path'),
+    os      = require('os'),
     options = require('./options.json');
     
 options.isWin = /^win/.test(os.platform());
