@@ -1,0 +1,288 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Steam Server Manager API",
+    "description": "API for managing steam dedicated servers, and their mods.",
+    "version": "1.0"
+  },
+  "produces": ["application/json"],
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "paths": {
+    "/config": {
+      "get": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "getConfig",
+        "tags": ["/config"],
+        "description": "Returns the current configuration.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "200": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      },
+      "post": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "postConfig",
+        "tags": ["/config"],
+        "description": "Modify all configurations.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "200": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      },
+      "put": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "putConfig",
+        "tags": ["/config"],
+        "description": "Modify a single configuration.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "200": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      }
+    },
+    "/mods": {
+      "get": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "getModConfig",
+        "tags": ["/mods"],
+        "description": "Returns the current Mod configurations.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "200": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      },
+      "post": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "postModConfig",
+        "tags": ["/mods"],
+        "description": "Modify all Mod configurations.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "201": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      },
+      "put": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "putModConfig",
+        "tags": ["/mods"],
+        "description": "Modify a single Mod configuration.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "200": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      },
+      "delete": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "deleteModConfig",
+        "tags": ["/mods"],
+        "description": "Remove a single Mod configuration.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "204": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      }
+    },
+    "/maps": {
+      "get": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "getMapConfig",
+        "tags": ["/maps"],
+        "description": "Returns the current map configuration.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "200": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      },
+      "post": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "postMapConfig",
+        "tags": ["/maps"],
+        "description": "Modify all Map configurations",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "201": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      },
+      "put": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "putMapConfig",
+        "tags": ["/maps"],
+        "description": "Modify a single map configuration.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "200": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      },
+      "delete": {
+        "x-swagger-router-controller": "Configuration",
+        "operationId": "deleteMapConfig",
+        "tags": ["/maps"],
+        "description": "Delete a single map configuration.",
+        "responses": {
+          "default": {
+            "description": "Invalid request.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "204": {
+            "description": "Successful request.",
+            "schema": {
+              "$ref": "#/definitions/Configuration"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Game": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string"
+            },
+            "gameId": {
+                "type": "string"
+            }
+        },
+        "required": ["name"]
+    },
+    "Error": {
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": ["message"]
+    },
+    "Server": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string"
+            },
+            "gameId": {
+                "type": "string"
+            }
+        },
+        "required": ["name"]
+    },
+
+    "Manager": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string"
+            },
+            "gameId": {
+                "type": "string"
+            }
+        },
+        "required": ["name"]
+    },
+    "Configuration": {
+    }
+  }  
+}

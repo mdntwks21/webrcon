@@ -10,14 +10,25 @@
     "type": "git",
     "url": "https://github.com/Smircher/webrcon.git"
   },
-  "author": {"name":"Raymond Say", "url":"https://github.com/Smircher","email":""},
-  "contributors": [{"name":"Airrick Woolen", "url":"https://github.com/Awoolen","email":""}],
+  "author": {
+    "name": "Raymond Say",
+    "url": "https://github.com/Smircher",
+    "email": ""
+  },
+  "contributors": [
+    {
+      "name": "Airrick Woolen",
+      "url": "https://github.com/Awoolen",
+      "email": ""
+    }
+  ],
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Smircher/webrcon/issues"
   },
   "homepage": "https://github.com/Smircher/webrcon",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "swagger-tools": "~0.9.9"
   }
 }
